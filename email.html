@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        td {
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>VidyoGateway</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th>All calls</th>
+            <th>Calls longer than 60 seconds</th>
+        </tr>
+        <tr>
+            <td>Concurrent lines</td>
+            <td>{{ .Vidyo}}</td>
+            <td>{{.VidyoMinuteLong}}</td>
+        </tr>
+        <tr>
+            <td>Total number of participants</td>
+            <td>{{.VidyoTotalParticipants}}</td>
+            <td>{{.VidyoParticipantsMinuteLong}}</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <h3>Pexip</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th>All calls</th>
+            <th>Calls longer than 60 seconds</th>
+        </tr>
+        <tr>
+            <td>Concurrent ports</td>
+            <td>{{.Pexip}}</td>
+            <td>{{.PexipMinuteLong}}</td>
+        </tr>
+        <tr>
+            <td>Total number of participants</td>
+            <td>{{.PexipTotalParticipants}}</td>
+            <td>{{.PexipTotalParticipantsMinuteLong}}</td>
+        </tr>
+        <tr>
+            <td>WebRTC participants</td>
+            <td>{{.PexipWebRTC}}</td>
+            <td>{{.PexipWebRTCMinuteLong}}</td>
+        </tr>
+        <tr>
+            <td>H.323 participants</td>
+            <td>{{.PexipH323}}</td>
+            <td>{{.PexipH323MinuteLong}}</td>
+        </tr>
+        <tr>
+            <td>SIP participants</td>
+            <td>{{.PexipSIP}}</td>
+            <td>{{.PexipSIPMinuteLong}}</td>
+        </tr>
+        <tr>
+            <td>S4B participants</td>
+            <td>{{.PexipS4B}}</td>
+            <td>{{.PexipS4BMinuteLong}}</td>
+        </tr>
+        <tr>
+            <td>RTMP participants</td>
+            <td>{{.PexipRTMP}}</td>
+            <td>{{.PexipRTMPMinuteLong}}</td>
+        </tr>
+    </table>
+</body>
+
+</html>
